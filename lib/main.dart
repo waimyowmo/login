@@ -5,6 +5,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  //return function , color not change sir!
+  //Help Me Sir,
+  FlatButton log({Color win, String text}) {
+    return FlatButton(
+      color: win,
+      onPressed: null,
+      child: Text(text),
+    );
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -59,32 +69,12 @@ class MyApp extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    FlatButton(
-                      color: Colors.red,
-                      textColor: Colors.white,
-                      disabledColor: Colors.grey,
-                      disabledTextColor: Colors.black,
-                      padding: EdgeInsets.all(8.0),
-                      splashColor: Colors.yellowAccent,
-                      onPressed: () {},
-                      child: Text('Login'),
-                      height: 40,
-                    ),
+                  children: <Widget>[
+                    log(win: Colors.green, text: 'Login'),
                     SizedBox(
                       width: 20,
                     ),
-                    FlatButton(
-                      color: Colors.red,
-                      textColor: Colors.white,
-                      disabledColor: Colors.grey,
-                      disabledTextColor: Colors.black,
-                      padding: EdgeInsets.all(8.0),
-                      splashColor: Colors.yellowAccent,
-                      onPressed: () {},
-                      child: Text('Register'),
-                      height: 40,
-                    ),
+                    log(win: Colors.red, text: 'Register'),
                   ],
                 ),
               ],
