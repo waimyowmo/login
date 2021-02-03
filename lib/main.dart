@@ -10,8 +10,9 @@ class MyApp extends StatelessWidget {
   FlatButton log({Color win, String text}) {
     return FlatButton(
       color: win,
-      onPressed: null,
+      onPressed: () {},
       child: Text(text),
+      textColor: Colors.white,
     );
   }
 
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'Username',
                     icon: Icon(Icons.person),
-                    contentPadding: EdgeInsets.all(20),
+                    contentPadding: EdgeInsets.all(10),
                   ),
                 ),
                 SizedBox(
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'Password',
                     icon: Icon(Icons.security),
+                    contentPadding: EdgeInsets.all(10),
                   ),
                 ),
                 SizedBox(
@@ -70,7 +72,10 @@ class MyApp extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    log(win: Colors.green, text: 'Login'),
+                    log(
+                      win: Colors.green,
+                      text: 'Login',
+                    ),
                     SizedBox(
                       width: 20,
                     ),
